@@ -1,0 +1,106 @@
+@font-face {
+  font-family: main-font;
+  font-weight: 400;
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: main-font;
+  font-weight: 500;
+  src: url(../assets/fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: main-font;
+  font-weight: 700;
+  src: url(../assets/fonts/Roboto-Bold.ttf);
+}
+
+body {
+  height: 100vh;
+  font-family: main-font;
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(180deg, #f0ffad 15%, #ffd9af 80%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(180deg, #f0ffad 15%, #ffd9af 80%);
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(180deg, #f0ffad 15%, #ffd9af 80%);
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFD9AF', endColorstr='#F0FFAD', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(180deg, #f0ffad 15%, #ffd9af 80%);
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(180deg, #f0ffad 15%, #ffd9af 80%);
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section {
+  display: grid;
+  border: 2px solid gray;
+  border-color: #6c969d;
+}
+
+.top {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "none none none none none"
+    "turn turn turn roll roll";
+  row-gap: 20px;
+  padding: 20px 40px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+#turn {
+  grid-area: turn;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#roll {
+  grid-area: roll;
+  font-size: large;
+  font-weight: 700;
+  padding: 0.7em 1.2em;
+  border-radius: 2em;
+  border: none;
+  color: white;
+  background-color: #8580b3;
+  transition: all 0.2s;
+}
+
+#roll:hover {
+  background-color: #6c66a3;
+}
+
+#roll:disabled {
+  background-color: #b6b3d1;
+}
+
+.bottom {
+  grid-template-columns: 2fr 1fr auto auto;
+  grid-template-rows: repeat(15, 30px);
+  padding: 20px;
+  align-items: center;
+}
+
+p:has(input) {
+  margin: 5px;
+  text-align: center;
+}
+
+input {
+  width: 50px;
+}

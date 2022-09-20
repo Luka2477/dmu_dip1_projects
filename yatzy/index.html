@@ -4,9 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" type="text/css" />
+    <script type="module" src="./scripts/game.js" defer></script>
     <title>Yatzy</title>
   </head>
   <body>
-    <h1>Yatzy</h1>
+    <div class="container">
+      <section class="top">
+        <div class="die" id="1"></div>
+        <div class="die" id="2"></div>
+        <div class="die" id="3"></div>
+        <div class="die" id="4"></div>
+        <div class="die" id="5"></div>
+        <h1 id="turn"></h1>
+        <button id="roll">ROLL</button>
+      </section>
+      <section class="bottom">
+        <p id="1s">1-s</p>
+        <input type="text" id="1s" readonly />
+        <div></div>
+        <div></div>
+        <p id="2s">2-s</p>
+        <input type="text" id="2s" readonly />
+        <div></div>
+        <div></div>
+        <p id="3s">3-s</p>
+        <input type="text" id="3s" readonly />
+        <div></div>
+        <div></div>
+        <p id="4s">4-s</p>
+        <input type="text" id="4s" readonly />
+        <div></div>
+        <div></div>
+        <p id="5s">5-s</p>
+        <input type="text" id="5s" readonly />
+        <div></div>
+        <div></div>
+        <p id="6s">6-s</p>
+        <input type="text" id="6s" readonly />
+        <p id="sum">Sum: <input type="text" id="sum" disabled readonly /></p>
+        <p id="bonus">
+          Bonus: <input type="text" id="bonus" disabled readonly />
+        </p>
+        <p id="1pair">One pair</p>
+        <input type="text" id="1pair" readonly />
+        <div></div>
+        <div></div>
+        <p id="2pair">Two pairs</p>
+        <input type="text" id="2pair" readonly />
+        <div></div>
+        <div></div>
+        <p id="3same">Three same</p>
+        <input type="text" id="3same" readonly />
+        <div></div>
+        <div></div>
+        <p id="4same">Four same</p>
+        <input type="text" id="4same" readonly />
+        <div></div>
+        <div></div>
+        <p id="fullhouse">Full house</p>
+        <input type="text" id="fullhouse" readonly />
+        <div></div>
+        <div></div>
+        <p id="smallstraight">Small straight</p>
+        <input type="text" id="smallstraight" readonly />
+        <div></div>
+        <div></div>
+        <p id="largestraight">Large straight</p>
+        <input type="text" id="largestraight" readonly />
+        <div></div>
+        <div></div>
+        <p id="chance">Chance</p>
+        <input type="text" id="chance" readonly />
+        <div></div>
+        <div></div>
+        <p id="yatzy">Yatzy</p>
+        <input type="text" id="yatzy" readonly />
+        <div></div>
+        <p id="total">
+          Total: <input type="text" id="total" disabled readonly />
+        </p>
+      </section>
+    </div>
   </body>
 </html>
